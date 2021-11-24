@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log-in</title>
+    <title>Minki</title>
     <!--link de fontawasone-->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
@@ -14,15 +14,50 @@
 </head>
 
 <body>
-    
+
     <header>
 
     </header>
 
-    <main>
-        <form action="">
+    <main class="main-forms">
+
+        <img src="" alt="">
+
+        <h2 class="title">Mi sesión</h2>
+
+        <form class="box-form" action="" method="">
+
+            <div class="div-forms">
+
+                <div class="box-input">
+                    <label class="label-style" for="email">E-mail</label>
+                    <input class="input-style" type="email" name="email" id="email">
+                    <span class="msj-error">Debes ingresar tu e-mail</span>
+                </div>
+
+                <div class="box-input">
+                    <label class="label-style" for="password">Contraseña</label>
+                    <input class="input-style" type="pass" name="pass" id="password">
+                    <span class="msj-error">Debes ingresar tu contraseña</span>
+                </div>
+
+                <div class="box-input">
+                    <input type="checkbox" checked><label for="">Recordarme</label>
+                </div>
+
+                <div class="box-button">
+                    <button type="submit">Ingresar</button>
+                    <span class="msj-error">Credenciales inválidas</span>
+                </div>
+
+                <span>¿Olvidaste tu contraseña?<a href="#">Haz click acá</a></span>
+
+                <span>¿No tenés cuenta?<a href="/register">Registrarme</a></span>
+
+            </div>
 
         </form>
+
     </main>
 
     <footer>

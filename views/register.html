@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>Minki</title>
     <!--link de fontawasone-->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
@@ -14,54 +14,57 @@
 </head>
 
 <body>
+    <!--header minimalista y en formularios quiero una imagen de fondo fija con opacidad-->
     <header>
 
     </header>
 
-    <main>
+    <main class="main-forms">
 
-        <h2>Registro</h2>
+        <img src="" alt="">
 
-        <form action="">
+        <h2 class="title">Registrarme</h2>
 
-            <div>
+        <form class="box-form" action="" method="">
 
-                <div>
-                    <label for="nombre">Nombre</label>
-                    <input type="text" name="name" id="nombre">
+            <div class="div-forms">
+
+                <div class="box-input">
+                    <label class="label-style" for="nombre">Nombre</label>
+                    <!--br??-->
+                    <input class="input-style" type="text" name="name" id="nombre">
+                    <span class="msj-error">Debes ingresar tu nombre</span>
                 </div>
 
-                <div>
-                    <label for="email">E-mail</label>
-                    <input type="email" name="email" id="email">
-                    <span>Debes ingresar tu e-mail</span>
+                <div class="box-input">
+                    <label class="label-style" for="email">E-mail</label>
+                    <input class="input-style" type="email" name="email" id="email">
+                    <span class="msj-error">Debes ingresar un e-mail</span>
                 </div>
 
-                <div>
-                    <label for="password">Contraseña</label>
-                    <input type="pass" name="pass" id="password">
-                    <span>Debes ingresar una contraseña</span>
+                <div class="box-input">
+                    <label class="label-style" for="password">Contraseña</label>
+                    <input class="input-style" type="pass" name="pass" id="password">
+                    <span class="msj-error">Debes ingresar una contraseña</span>
                 </div>
 
-                <div>
-                    <label for="password">Repetir contraseña</label>
-                    <input type="pass" name="pass" id="password">
-                    <span>Debes re-ingresar tu contraseña</span>
-                </div>
-
-                <div>
+                <div class="box-input">
                     <input type="checkbox" checked><label for="">Recordarme</label>
                 </div>
 
-                <div>
-                    <label for="">Aceptar los terminos y condiciones</label>
+                <div class="box-input">
+                    <label class="label-style" for="">Aceptar los terminos y condiciones</label>
                     <input type="checkbox" checked>
+                    <span class="msj-error">Debes aceptar los términos y condiciones</span>
                 </div>
 
-                <div>
-                    <button type="submit" >Registrarme</button>
+                <div class="box-button">
+                    <button type="submit">Registrarme</button>
+                    <span class="msj-error">Hubo errores en tu envio</span>
                 </div>
-                
+
+                <span><a href="/login">Ya tengo mi cuenta</a></span>
+
             </div>
 
         </form>
