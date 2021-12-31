@@ -4,7 +4,20 @@ const PORT = 3003;
 const path = require('path');
 app.use(express.static('public'));
 
+/* EJS */
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
+/* CAPTURA DE INFORMACIÓN (todo lo que llegue en el form lo queremos capturar como objeto literal) */
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json()); 
+
+/* METHOD-OVERRIDE (PUT y DELETE)*/
+const methodOverride = require('method-override');
+app.use(methodOverride('_method'));
+
+/* MULTER (Insertar archivos)*/
+const multer = require('multer');
 
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, '/views/home.html'))
@@ -28,4 +41,12 @@ app.get('/productDetail', function (req, res) {
 
 
 
-app.listen(PORT, () => console.log(`Servidor escuchando en el puerto ${PORT}http://localhost:${PORT}`))
+app.listen(PORT, () => console.log(`Servidor escuchando en el puerto ${PORT}
+http://localhost:${PORT}`))
+
+/* INSTALACIONES NECESARIAS */
+/* npm install ejs */
+/* npm install method-override (para métodos PUT y DELETE)*/
+/* npm install multer (subida de archivos)*/
+/*  */
+/*  */
