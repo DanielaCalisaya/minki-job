@@ -2,6 +2,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    background-color: rgb(77, 77, 77);
+    color: white;
 }
-
-/*Traer los colores*/

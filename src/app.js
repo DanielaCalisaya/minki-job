@@ -18,11 +18,17 @@ app.use(methodOverride('_method'));
 
 /* MULTER (Insertar archivos)*/
 const multer = require('multer');
+const res = require('express/lib/response');
 
 /* ROUTES */
+let homeRoute = require('./routes/indexRouter');
+
+/*  */
+app.use('/home', homeRoute);
 
 
-app.get('/register', function (req, res) {
+
+/* app.get('/register', function (req, res) {
     res.sendFile(path.join(__dirname, '/views/register.html'))
 })
 
@@ -32,10 +38,10 @@ app.get('/productCart', function (req, res) {
 
 app.get('/productDetail', function (req, res) {
     res.sendFile(path.join(__dirname, '/views/productDetail.html'))
-})
+}) */
 
 
-
+/* PUERTO */
 app.listen(PORT, () => console.log(`Servidor escuchando en el puerto ${PORT}
 http://localhost:${PORT}`))
 
