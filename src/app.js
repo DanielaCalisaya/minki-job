@@ -19,13 +19,8 @@ app.use(methodOverride('_method'));
 /* MULTER (Insertar archivos)*/
 const multer = require('multer');
 
-app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, '/views/home.html'))
-})
+/* ROUTES */
 
-app.get('/login', function (req, res) {
-    res.sendFile(path.join(__dirname, '/views/login.html'))
-})
 
 app.get('/register', function (req, res) {
     res.sendFile(path.join(__dirname, '/views/register.html'))
@@ -43,6 +38,14 @@ app.get('/productDetail', function (req, res) {
 
 app.listen(PORT, () => console.log(`Servidor escuchando en el puerto ${PORT}
 http://localhost:${PORT}`))
+
+/* ANTES -> 
+app.get('/', function (req, res) {
+    res.sendFile(path.join(__dirname, '/views/home.html'))
+})
+app.get('/login', function (req, res) {
+    res.sendFile(path.join(__dirname, '/views/login.html'))
+}) */
 
 /* INSTALACIONES NECESARIAS */
 /* npm install ejs */
