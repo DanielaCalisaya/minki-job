@@ -17,14 +17,14 @@ const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
 
 /* MULTER (Insertar archivos)*/
-const multer = require('multer');
-const res = require('express/lib/response');
+/* const multer = require('multer');
+const res = require('express/lib/response'); */
 
 /* ROUTES */
 let homeRoute = require('./routes/indexRouter');
 
-/*  */
-app.use('/home', homeRoute);
+/* Home */
+app.use('/', homeRoute);
 
 
 
@@ -43,7 +43,7 @@ app.get('/productDetail', function (req, res) {
 
 /* PUERTO */
 app.listen(PORT, () => console.log(`Servidor escuchando en el puerto ${PORT}
-http://localhost:${PORT}`))
+http://localhost:${PORT}`));
 
 /* ANTES -> 
 app.get('/', function (req, res) {
@@ -57,5 +57,3 @@ app.get('/login', function (req, res) {
 /* npm install ejs */
 /* npm install method-override (para métodos PUT y DELETE)*/
 /* npm install multer (subida de archivos)*/
-/*  */
-/*  */

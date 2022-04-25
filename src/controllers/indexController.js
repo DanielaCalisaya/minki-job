@@ -1,7 +1,9 @@
 let controller = {
+
     index: (req, res) => {
-        res.render('/')
+        res.render('home')
     }
+
 }
 
 
