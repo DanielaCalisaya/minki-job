@@ -1,9 +1,5 @@
 /*exports*/
 
 @import url('general.css');
-
 @import url('home.css');
-
-
-/* @import url('form.css');
-@import url('productCart.css'); */
+@import url('header.css');

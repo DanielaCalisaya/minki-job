@@ -1,0 +1,26 @@
+.header {
+    width: 100%;
+    height: 15vh;
+    background-color: #56425A;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+.header img {
+   /*  width: 100%; */
+    width: 100px;
+    height: 100px;
+}
+
+.header .hamburger {
+    margin: 15px;
+}
+
+.header .hamburger hr {
+    background-color: #E5E5E5; 
+    width: 25px; 
+    height: 3px;
+    margin-bottom: 4px;
+    
+}
