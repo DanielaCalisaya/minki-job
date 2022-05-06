@@ -1,6 +1,5 @@
 /* Carousel */
 /* contenedor principal */
-
 .carouselContainer {
     max-width: 1000px;
     position: relative;
@@ -84,4 +83,7 @@
     }
 }
 
-/* --------End carousel-------- */
+/* Text */
+.text {
+    /* poner clase al body y a p */
+}
