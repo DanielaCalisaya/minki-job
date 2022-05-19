@@ -1,6 +1,6 @@
 /* Mobile desde 320px */
 
-/* Carousel */
+/* Carousel ---------- */
 
 /* contenedor principal */
 .body-home .carouselContainer {
@@ -70,17 +70,19 @@
 }
 
 
-/* Text debajo del carrusel*/
+/* Text debajo del carrusel ---------- */
 .body-home .text {
     background-color: var(--color-purple);
     color: var(--color-ligth-grey);
+    font-family: var(--font-pompiere);
+    font-weight: 700;
     text-align: center;
     height: 60px;
     padding: 10px;
 }
 
 
-/* Section categories */
+/* Section categories ---------- */
 .body-home .sectionCategories {
     width: 100%;
     display: flex;
