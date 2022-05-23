@@ -13,17 +13,6 @@
     height: 90px;
 }
 
-/* .header .hamburger {
-    margin: 15px;
-}
-
-.header .hamburger hr.hr-hamburguer {
-    background-color: #E5E5E5; 
-    width: 25px; 
-    height: 3px;
-    margin-bottom: 4px; 
-}  */
-
 #hamburger-container {
     width: 45px;
     height: 45px;
@@ -40,22 +29,107 @@
 }
 
 #hamburger button span {
-    border-radius: 4px;  
+    border-radius: 4px;   
     background: white;
     display: block;
     width: 60%;
     margin: 5px auto;
-    height: 3px;
+    height: 2.5px; /* 3px tenia antes*/
+    animation-duration: 0.6s; /* si o si hay habrá que ponerle una duración, sino por defecto será 0s. */
+    animation-fill-mode: forwards; /* La animation-fill-modepropiedad especifica un estilo para el elemento de destino cuando la animación no se está reproduciendo.
+    El elemento conservará los valores de estilo establecidos por el último fotograma clave */
 }
-/* animations */
-#hamburger button .top-line {
+
+/* animations - le asigno nombre a la animación(cada línea) */
+#hamburger button.open .top-line { 
     animation-name: top-line-animation;
 }
 
-#hamburger button .middle-line {
+#hamburger button.open .middle-line {
     animation-name: middle-line-animation;
 }
 
-#hamburger button .button-line {
+#hamburger button.open .button-line {
     animation-name: button-line-animation;
+}
+
+#hamburger button .top-line { /* le asigno nombre a la animación(al cerrar) */
+    animation-name: top-line-animation-close;
+}
+
+#hamburger button .middle-line {
+    animation-name: middle-line-animation-close;
+}
+
+#hamburger button .button-line {
+    animation-name: button-line-animation-close;
+}
+
+@keyframes top-line-animation { /* Al hacer click: lo que hará el primer frame de la animación */
+
+    50%, 100% { 
+        margin: 0 auto;
+        transform: translateY(2px) rotate(-45deg);
+    }
+
+}
+
+@keyframes button-line-animation {
+
+    50%, 100% { 
+        margin: 0 auto;
+        transform: translateY(-2px) rotate(45deg);
+    }
+    
+}
+
+@keyframes middle-line-animation {
+
+    20%, 100% { 
+        margin: 0 auto;
+        width: 0;
+        opacity: 0;
+    }
+    
+}
+
+@keyframes top-line-animation-close { /* Se encuentra en close la animación, después volvemos al mismo estado del principio */
+
+    0% { 
+        margin: 0 auto;
+        transform: translateY(2px) rotate(-45deg);
+    }
+    50%, 100% {
+        margin: 5px auto;
+        transform: rotateY(0px) rotate(0deg);
+    }
+
+}
+
+@keyframes middle-line-animation-close {
+
+    0% { 
+        margin: 0 auto;
+        width: 0;
+        opacity: 0;
+    }
+    20%, 100% {
+        margin: 0 auto;
+        width: 60%;
+        opacity: 1;
+    }
+    
+}
+
+@keyframes button-line-animation-close {
+
+    0% { 
+        margin: 0 auto;
+        transform: translateY(-2px) rotate(45deg);
+    }
+    50%, 100% { 
+        margin: 5px auto;
+        transform: translateY(0px) rotate(0deg);
+    }
+    
 }
