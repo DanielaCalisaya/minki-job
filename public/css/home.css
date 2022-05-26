@@ -4,7 +4,7 @@
 
 /* contenedor principal */
 .body-home .carouselContainer {
-    max-width: 1000px; /* ponerle un maximo de altura tamb */
+    max-width: 1000px; 
     position: relative;
     margin: auto;
 }

@@ -8,11 +8,69 @@
     justify-content: space-between;
 }
 
+.header .nav-list { /* recien display block en 768px */
+    display: none;
+}
+
 .header img.img-logo {
     width: 90px;
     height: 90px;
 }
 
+/* animation search */
+.header .form-search {
+    position: absolute;
+    top: 45px; 
+    right: 45px;
+    transform: translate(-50%, -50%);
+    background: var(--color-ligth-grey);
+    height: 40px;
+    border-radius: 40px;
+    padding: 0; /* tenia 10px */
+}
+
+.header .form-search:hover > .input-search {
+    width: 120px;/* 240 tenia */
+    padding: 0 6px; 
+    
+}
+
+.header .form-search:hover > .search-btn {
+    background: var(--color-purple);
+    color: var(--color-ligth-grey);
+}
+
+.header .form-search .search-btn {
+    background: var(--color-ligth-grey);
+    color: var(--color-purple);
+    float: right; /* ? */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    text-decoration: none;
+}
+
+.header .form-search .input-search {
+    border: none;
+    background: none;
+    outline: none;
+    float: left; 
+    padding: 0;
+    color: black;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px; 
+    width: 0;
+   
+}
+
+
+
+/* animation hamburger */
 #hamburger-container {
     width: 45px;
     height: 45px;
@@ -30,7 +88,7 @@
 
 #hamburger button span {
     border-radius: 4px;   
-    background: white;
+    background: var(--color-ligth-grey);
     display: block;
     width: 60%;
     margin: 5px auto;
